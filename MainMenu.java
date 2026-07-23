@@ -17,7 +17,8 @@ public class MainMenu extends UI{
         while(true){
             System.out.println("----Finance Tracker 2.0----");
             System.out.println("Type in a command");
-            System.out.println("(C)ategory Menu Go to Category menu\n(Q)uit program");
+            System.out.println("Letters inside () are commands");
+            System.out.println("(C)ategory Menu\n(Q)uit program");
             String command = scanner.nextLine().trim().toLowerCase();
             Runnable action = commands.get(command);
             if(action != null){
