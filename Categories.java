@@ -1,10 +1,15 @@
+import java.io.Serial;
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Categories {
+public class Categories implements Serializable {
 
-    private List<Category> categories;
+    @Serial
+    private static final long serialVersionUID = 8L;
+
+    private final List<Category> categories;
 
     public Categories(){
         this.categories = new ArrayList<>();

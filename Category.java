@@ -1,12 +1,17 @@
+import java.io.Serial;
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Objects;
 
-public class Category {
+public class Category implements Serializable {
+
+    @Serial
+    private static final long serialVersionUID = 8L;
 
     private final String name;
     private BigDecimal funds;
-    private ArrayList<Transaction> history;
+    private final ArrayList<Transaction> history;
 
     public Category(String name, BigDecimal initialFunds){
         if(name == null || name.isBlank()){

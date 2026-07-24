@@ -35,11 +35,15 @@ public class CategoryMenu extends UI{
     }
 
     public void addCategory(){
-        System.out.println("Enter name of the category to add");
-        String name = scanner.nextLine().toUpperCase();
-        System.out.println("Enter amount for initial funds");
-        String initialFunds = scanner.nextLine();
-        this.list.createNewCategory(name, initialFunds);
+        try{
+            System.out.println("Enter name of the category to add");
+            String name = scanner.nextLine().toUpperCase();
+            System.out.println("Enter amount for initial funds");
+            String initialFunds = scanner.nextLine();
+            this.list.createNewCategory(name, initialFunds);
+        } catch (IllegalArgumentException e){
+            System.out.println(e.getMessage());
+        }
     }
 
     public void removeCategory(){

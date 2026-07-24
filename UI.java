@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class UI{
 
     protected Categories list;
+    protected FileIO io;
     protected Scanner scanner;
 
     public UI(Categories list){
